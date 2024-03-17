@@ -3,7 +3,10 @@ import { createContext, useContext, useState } from "react";
 const Context = createContext();
 
 export const ContextProvider = ({ children }) => {
-  const contextValue = {};
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+
+  const contextValue = { password, setPassword, email, setEmail };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;
 };
