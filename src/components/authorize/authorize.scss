@@ -116,11 +116,23 @@
     flex-direction: column;
     gap: 8px;
   }
+  &__field-wrapper{
+    position: relative;
+  }
   &__input-wrapper-title {
     font-weight: 500;
     font-size: 15px;
     line-height: 140%;
     letter-spacing: 0em;
     color: var(--secondaryTextColor);
+  }
+  &__show-password {
+    background-color: unset;
+    border: none;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translate(0%, -50%);
+    cursor: pointer;
   }
 }

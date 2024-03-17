@@ -3,11 +3,18 @@ import Logo from "../logo/Logo";
 import "./authorize.scss";
 import googleIcon from "../../img/authorize/google.svg";
 import githubIcon from "../../img/authorize/git.svg";
+import union from "../../img/authorize/union.svg";
 import Title from "../title/Title";
 import { Link } from "react-router-dom";
 import ButtonForm from "../../UI/buttonForm/ButtonForm";
+import LinkForm from "../../UI/linkForm/LinkForm";
+import FieldInput from "./fieldInput/FieldInput";
+import PasswordField from "./passwordField/PasswordField";
+import { useContextData } from "../../context/Context";
 
 const Authorize = ({ title, login, forgot, create }) => {
+  const { test } = useContextData();
+
   return (
     <div className="authorize">
       <Container>
@@ -37,20 +44,8 @@ const Authorize = ({ title, login, forgot, create }) => {
                   </div>
                   <form className="authorize__form">
                     <div className="authorize__inputs">
-                      <div className="authorize__input-wrapper">
-                        <input
-                          className="authorize__input"
-                          placeholder="Work email"
-                          type="text"
-                        />
-                      </div>
-                      <div className="authorize__input-wrapper">
-                        <input
-                          className="authorize__input"
-                          placeholder="Password"
-                          type="passowrd"
-                        />
-                      </div>
+                      <FieldInput placeholder={"Work email"} />
+                      <PasswordField placeholder={"Password"} union={union} />
                     </div>
                     <div className="authorize__bottom">
                       <Link to={"/forgot-password"} className="authorize__link">
@@ -76,13 +71,7 @@ const Authorize = ({ title, login, forgot, create }) => {
               <div className="authorize__content">
                 <form className="authorize__form">
                   <div className="authorize__inputs">
-                    <div className="authorize__input-wrapper">
-                      <input
-                        className="authorize__input"
-                        placeholder="Enter your email"
-                        type="text"
-                      />
-                    </div>
+                    <FieldInput placeholder={"Enter your email"} />
                   </div>
                   <div className="authorize__bottom">
                     <div className="authorize__bottom-items">
@@ -91,7 +80,8 @@ const Authorize = ({ title, login, forgot, create }) => {
                         width={"100%"}
                         theme={"btn_primary"}
                       />
-                      <ButtonForm
+                      <LinkForm
+                        path={"/"}
                         text={"Cancel"}
                         width={"100%"}
                         theme={"btn_secondary"}
@@ -105,26 +95,18 @@ const Authorize = ({ title, login, forgot, create }) => {
               <div className="authorize__content">
                 <form className="authorize__form">
                   <div className="authorize__inputs">
-                    <div className="authorize__input-wrapper">
-                      <h3 className="authorize__input-wrapper-title">
-                        Password
-                      </h3>
-                      <input
-                        className="authorize__input"
-                        placeholder="Enter your email"
-                        type="text"
-                      />
-                    </div>
-                    <div className="authorize__input-wrapper">
-                      <h3 className="authorize__input-wrapper-title">
-                        Password
-                      </h3>
-                      <input
-                        className="authorize__input"
-                        placeholder="Enter your email"
-                        type="text"
-                      />
-                    </div>
+                    <PasswordField
+                      union={union}
+                      titleInput
+                      title={"Password"}
+                      placeholder={"Password"}
+                    />
+                    <PasswordField
+                      union={union}
+                      titleInput
+                      title={"Confirm Password"}
+                      placeholder={"Password"}
+                    />
                   </div>
                   <div className="authorize__bottom">
                     <div className="authorize__bottom-items">
