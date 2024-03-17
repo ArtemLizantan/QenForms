@@ -4,11 +4,19 @@
   padding-top: 180px;
   padding-bottom: 110px;
   justify-content: center;
+
+  @media (max-width: 567px) {
+    padding: 40px 0;
+  }
   &__window {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 83px;
+
+    @media (max-width: 567px) {
+      gap: 40px;
+    }
   }
   &__form-wrapper {
     display: flex;
@@ -16,6 +24,10 @@
     gap: 42px;
     max-width: 400px;
     width: 100%;
+
+    @media (max-width: 567px) {
+      max-width: unset;
+    }
   }
   &__form {
     display: flex;
@@ -26,6 +38,11 @@
     display: flex;
     align-items: center;
     gap: 16px;
+
+    @media (max-width: 567px) {
+      flex-direction: column;
+      align-items: unset;
+    }
   }
   &__login-btn {
     border: 1.2px solid var(--borderColor);
@@ -41,6 +58,10 @@
     line-height: 143%;
     color: #060e1e;
     cursor: pointer;
+
+    @media (max-width: 567px) {
+      justify-content: center;
+    }
   }
 
   &__delimeter {
@@ -72,6 +93,10 @@
     width: 100%;
     padding: 16px 12px;
     max-width: 400px;
+
+    @media (max-width: 567px) {
+      max-width: unset;
+    }
 
     &::placeholder {
       font-weight: 400;
@@ -116,7 +141,7 @@
     flex-direction: column;
     gap: 8px;
   }
-  &__field-wrapper{
+  &__field-wrapper {
     position: relative;
   }
   &__input-wrapper-title {
