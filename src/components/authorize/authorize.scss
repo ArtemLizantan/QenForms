@@ -1,0 +1,126 @@
+.authorize {
+  display: flex;
+  padding: 0 40px;
+  padding-top: 180px;
+  padding-bottom: 110px;
+  justify-content: center;
+  &__window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 83px;
+  }
+  &__form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    max-width: 400px;
+    width: 100%;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__login-btns {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  &__login-btn {
+    border: 1.2px solid var(--borderColor);
+    border-radius: 6px;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 57px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    color: #060e1e;
+    cursor: pointer;
+  }
+
+  &__delimeter {
+    display: flex;
+    align-items: center;
+    margin: 30px 0px 33px 0;
+  }
+  &__delimeter-line {
+    background-color: #dadee9;
+    flex: 1;
+    height: 1px;
+  }
+  &__delimeter-text {
+    font-weight: 500;
+    font-size: 12px;
+    color: #bec5cc;
+    text-transform: uppercase;
+    margin: 0 5px;
+  }
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 13px;
+  }
+  &__input {
+    border: 1.2px solid var(--borderColor);
+    border-radius: 6px;
+    width: 100%;
+    padding: 16px 12px;
+    max-width: 400px;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 133%;
+      color: var(--greyColor);
+    }
+  }
+  &__link {
+    text-align: right;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    text-align: right;
+    color: var(--blueColor);
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    text-align: center;
+  }
+  &__bottom-info {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: var(--secondaryTextColor);
+    a {
+      color: var(--blueColor);
+      font-weight: 500;
+    }
+  }
+  &__bottom-items {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  &__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  &__input-wrapper-title {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+    letter-spacing: 0em;
+    color: var(--secondaryTextColor);
+  }
+}

@@ -1,0 +1,20 @@
+@import "./reset.scss";
+@import "./fonts.scss";
+
+
+body {
+  font-family: "Basis Grotesque Pro", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  background-color: var(--main-bg);
+  box-sizing: border-box;
+}
+
+body {
+  --main-bg: #fff;
+  --blueColor: #316fea;
+  --textColor: #1a1919;
+  --borderColor: #d3d8dc;
+  --secondaryTextColor: #060e1e;
+  --greyColor: #a1abb5;
+}
