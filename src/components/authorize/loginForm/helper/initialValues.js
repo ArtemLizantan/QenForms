@@ -14,6 +14,8 @@ export const schemas = {
     email: Yup.string()
       .matches(regx.email, "Invalid email format")
       .required("Email is required"),
-    password: Yup.string().required("Password is required"),
+    password: Yup.string()
+      .required("Password is required")
+      .min(8, "Password must be at least 8 characters"),
   }),
 };

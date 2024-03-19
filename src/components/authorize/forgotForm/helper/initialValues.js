@@ -1,7 +1,7 @@
 import * as Yup from "yup";
 
 export const initialValues = {
-  oldEmail: "",
+  email: "",
 };
 
 const regx = {
@@ -10,7 +10,7 @@ const regx = {
 
 export const schemas = {
   custom: Yup.object().shape({
-    oldEmail: Yup.string()
+    email: Yup.string()
       .matches(regx.email, "Invalid email format")
       .required("Email is required"),
   }),

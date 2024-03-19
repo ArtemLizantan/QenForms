@@ -1,6 +1,6 @@
 import styles from "./buttonForm.module.scss";
 
-const ButtonForm = ({ text, width, onClick, theme, disabled ,type }) => {
+const ButtonForm = ({ text, width, onClick, theme, disabled, type }) => {
   return (
     <button
       disabled={disabled}

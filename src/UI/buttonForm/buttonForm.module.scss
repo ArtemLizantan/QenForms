@@ -17,10 +17,10 @@
   line-height: 131%;
   text-align: center;
   color: #fff;
-  // &:hover {
-  //   transform: translateY(-3px);
-  //   box-shadow: 0 5px 20px 10px rgb(20 81 255 / 44%);
-  // }
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px 0px rgb(20 81 255 / 44%);
+  }
 }
 
 .btn_primary {
