@@ -8,12 +8,10 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  // <React.StrictMode>
   <ContextProvider>
-    <BrowserRouter basename="/QenLogin/">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
-      <ToastContainer />
+    <ToastContainer />
   </ContextProvider>
-  // </React.StrictMode>
 );

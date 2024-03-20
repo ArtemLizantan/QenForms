@@ -137,7 +137,7 @@ const CreateForm = () => {
         onSubmit={async (values, actions) => {
           try {
             const response = await axios.post(
-              "https://auth-qa.qencode.com/v1/auth/login",
+              "https://auth-qa.qencode.com/v1/auth/password-set",
               {
                 token: token,
                 secret: secret,
